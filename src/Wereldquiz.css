@@ -1,0 +1,197 @@
+/* Basispagina met donkere achtergrond */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  font-size: 18px; /* grotere basislettergrootte */
+}
+.antwoord-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.bevestig-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.leaflet-container {
+  background: #e0e0e0; /* of #fff als je het liever wit houdt */
+  border-radius: 0 !important; /* Vermijd conflicten */
+}
+
+
+
+/* Container voor quizinhoud */
+.quiz-container {
+  position: relative;
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: 3rem auto;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  color: #f0f0f0;
+}
+
+/* Stopknop linksboven */
+.stop-button {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Titels */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+/* Paragrafen */
+p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Knoppenrij */
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 1.1rem;
+}
+
+.button:hover {
+  background: #444;
+}
+
+.button.primary {
+  background: #2e7d32;
+}
+
+.button.secondary {
+  background: #d32f2f;
+  margin-top: 1rem;
+}
+
+.button.active {
+  background: #2196f3;
+}
+
+/* Continenten selectie */
+.continent-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.continent-grid label {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+/* Inputveld */
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  border: 1px solid #666;
+  background-color: #2a2a2a;
+  color: white;
+}
+
+/* Vlag */
+.flag-image {
+  display: block;
+  width: 180px;
+  margin: 0 auto 1.5rem auto;
+  border: 1px solid #555;
+}
+
+/* Feedbacktekst */
+.feedback {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Kaartcontainer */
+.kaart-container {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  margin: 1rem auto;
+  position: relative;
+  z-index: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #444;
+}
+
+/* Resultaten */
+.resultaten {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+/* Responsief gedrag */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  .kaart-container {
+    height: 320px;
+  }
+
+  .continent-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .button.secondary {
+    width: 100%;
+  }
+
+  .stop-button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
